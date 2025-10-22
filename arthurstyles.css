@@ -12,7 +12,7 @@ body {
 }
 
 #welcome {
-    background-color: #F3BDB2;
+    background-color: #f4b19f;
 }
 
 #mmenu {
@@ -24,12 +24,16 @@ body {
 }
 
 #products {
-    background-color: #F2ECD7;
+    background-color: #f4b19f;
 }
 
 #contact {
-    background-color: #F3BDB2;
+    background-color: #f4b19f;
 }
+
+
+
+
 
 
 @media screen and (min-width: 1024px) {
@@ -160,7 +164,7 @@ body {
   @media screen and (min-width: 1024px) {
     #mmenu {
       height: 100vh;
-      width: 100vw;
+      width: 99vw;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -293,7 +297,9 @@ body {
      }
    }
   
-  .contact-btn-area {
+  
+  
+   .contact-btn-area {
     top: 70%;
     left: 40%;
     width: 180px;
@@ -315,54 +321,6 @@ body {
   
 
  
-
-  
-
-
-
-
-
-
-
-
-
-  
-  .about-section {
-    height: 100vh;
-    width: 96vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media screen and (min-width: 1024px) {
-    .about-section {
-      height: 130vh;
-      width: 175vh; /* or whatever fits your full scroll image */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
-  .about-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: auto;
-  }
-  
-  .about-scroll {
-    max-height: 120vh;
-    max-width: 120vw;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin-left:-1vh;
-  }
-
   .contact-section {
     height: 100vh;
     width: 96vw;
@@ -374,6 +332,7 @@ body {
   @media screen and (min-width: 1024px) {
     .contact-section {
       height: 130vh;
+      width: 99vw;
     }
   }
 
@@ -414,7 +373,11 @@ body {
 
 
   .product-section {
-    padding: 2rem 1rem;
+    height: 150vh;             /* increase the viewport height for the section */
+    padding: 4rem 1rem;       /* gives breathing room for arrows and layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 
@@ -442,64 +405,177 @@ body {
     display: block;
   }
 
-
   @media screen and (min-width: 1024px) {
-    .carousel-wrapper {
-      position: relative;
-      width: 100vw;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .product-section {
+      padding: 80rem 2rem;
     }
   
-    .carousel-track {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-      width: 300vw; /* 3 products = 3x width */
+    .product-grid {
+      gap: 5rem; /* more breathing space between images */
     }
   
     .product {
-      flex: 0 0 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      max-width: 800px; /* bigger image container */
     }
   
     .product-img {
-      width: 500px;
+      width: 100%;
+      max-width: 800px; /* scales nicely on large screens */
       height: auto;
-    }
-  
-    .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 3rem;
-      background: none;
-      border: none;
-      color: #DE3900; /* bright coral from menu-section */
-      cursor: pointer;
-      z-index: 10;
-    }
-  
-    .carousel-arrow.left {
-      left: 30px;
-    }
-  
-    .carousel-arrow.right {
-      right: 30px;
     }
   }
 
-  .carousel-arrow {
+
+  
+
+
+  br {
     display: none;
   }
 
 
+@media (min-width: 1024px) {
 
-
+    br {
+      display: inline;
+    }
+   
+    .about--desktop {
+      background-color: #F4E0c6; /* beige */
+      color: #273d21; /* forest green */
+      height: 110vh;
+    }
   
+    .vision-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 1rem
+    }
+
+   
+  
+    .vision-title {
+      color: #dd3b00; /* Arthur orange */
+      font-weight: 300;
+      font-size: 6rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+  
+    .vision-container p {
+      font-size: 2rem;
+      line-height: 1.6;
+      max-width: 70ch;
+      margin-bottom: 1.25rem;
+    }
+  
+    .vision-art {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+  
+    .vision-art img {
+      max-height: 500px;
+      left: 45%;
+      height: auto;
+      position: absolute;
+      top: 232%;
+    }
+  }
+
+
+
+
+  .icons-section {
+    background-color: #F4E0C6; /* bisque background for seamless blend */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    height: 30vh;
+  }
+  
+  .icons-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .palette-img, 
+  .icons-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 0;
+  }
+  
+  /* Desktop adjustments */
+  @media screen and (min-width: 1024px) {
+    .icons-section {
+      height: 120vh;
+      background-color: #F4E0C6;
+    }
+  
+    .icons-wrapper {
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .icons-img {
+      max-width: 1086px; /* matches your PNG width */
+    }
+  }
+
+
+
+
+
+
+
+
+  .palette-section {
+    background-color: #F4E0C6; /* soft bisque to match palette background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    height: 30vh;
+  }
+  
+  .palette-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .palette-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    object-fit: contain;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .palette-section {
+      height: 120vh;
+      background-color: #F4E0C6;
+    }
+    .palette-img {
+      max-width: 1086px; /* your PNG’s native width */
+    }
+  }
+
+
+
 
 
 
@@ -507,4 +583,46 @@ body {
 
 
  
+  .about--desktop{
+    background:#F4E0C6;           /* beige */
+    color:#273d21;                /* forest green */
+    padding:2rem 1.25rem;         /* comfy mobile padding */
+    text-align:center; 
+  }
+  
+  .vision-container{
+    max-width:680px;              /* readable line length */
+    margin:0 auto;
+  }
+  
+  .vision-title{
+    color:#dd3b00;                /* Arthur orange */
+    font-weight:500;
+    font-size:clamp(1.75rem, 6vw, 2.5rem);
+    line-height:1.2;
+    margin-bottom:0.75rem;
+  }
+  
+  .vision-container p{
+    font-size:clamp(1rem, 3.8vw, 1.125rem);
+    line-height:1.6;
+    margin-bottom:1rem;
+  }
+  
+  /* make the art behave on mobile (no absolute positioning) */
+  .vision-art{
+    margin-top:1rem;
+    display:flex;
+    justify-content:center;
+  }
+  
+  .vision-art img{
+    position:static;              /* override desktop absolute */
+    max-width:90%;
+    height:auto;
+  }
+
+
+
+
   
